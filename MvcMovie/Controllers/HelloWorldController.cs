@@ -10,7 +10,7 @@ namespace MvcMovie.Controllers
 
         public IActionResult Index()
         {
-            // Call's the controller's 
+            // Call's the controller method's default view, which should have the same name as the method (Index.cshtml, in this case)
             return View();
         }
 
@@ -19,6 +19,7 @@ namespace MvcMovie.Controllers
 
         public IActionResult Welcome(string name, int numTimes = 1)
         {
+            // This stuff gets stored in ViewData dictionary so it can be used by the "Welcome.cshtml" view found in the HelloWorld folder.
             ViewData["Message"] = "Hello " + name;
             ViewData["NumTimes"] = numTimes;
 

@@ -3,10 +3,14 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+// This was my first migration in the tutorial. This helps set up the SQL local database.
+
 namespace MvcMovie.Migrations
 {
+    // Interesting that this is a class.
     public partial class InitialCreate : Migration
     {
+        // Up is used to update, if I recall correctly. It appears to actually create the table and columns.
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
@@ -26,6 +30,7 @@ namespace MvcMovie.Migrations
                 });
         }
 
+        // This is used to take down the table, or something like that.
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
